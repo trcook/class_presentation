@@ -58,7 +58,7 @@ $if(biblatex)$
 \renewbibmacro{in:}{%
   \ifentrytype{article}{}{%
   \printtext{\bibstring{in}\intitlepunct}}}
-  
+
 
 % this sets up the footnote year citation:
 
@@ -231,7 +231,7 @@ $endif$
      \end{beamercolorbox}
    }
  \makeatother
- 
+
 
 \usepackage{sfgame} % sets up to use game
  \setbeamercovered{invisible} % sets semi-visibility for covered items
@@ -239,6 +239,11 @@ $endif$
 \usepackage{ctable} %use for some tables, esp appendix a and for tables in analysis. Is needed for footnotes in tables. Must be loaded last to work in latex 2014
 
 \setbeamertemplate{navigation symbols}{}
+
+
+% add tightlist to shut pandoc up
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 \begin{document}
 
